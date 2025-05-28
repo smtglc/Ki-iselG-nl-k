@@ -1,0 +1,92 @@
+body {
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #2a2a2a;
+  padding: 15px 0;
+}
+.modal-content {
+  background-color: #2a2a2a; /* Koyu zemin */
+  color: #fff; /* Beyaz yazı */
+}
+
+.modal-content h4 {
+  color: #fff; /* Başlıklar için garanti */
+  margin-bottom: 20px;
+}
+.navbar-brand .logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff00ff, #00ffcc);
+  -webkit-background-clip: text; /* WebKit için */
+  background-clip: text; /* Standart özellik */
+  -webkit-text-fill-color: transparent;
+}
+
+.search-form {
+  width: 300px;
+}
+
+.search-input {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.search-input::placeholder {
+  color: #888;
+}
+
+.nav-link {
+  color: #ff80bf !important; /* Daha soluk bir pembe */
+  margin-left: 15px;
+}
+
+.nav-link:hover {
+  color: #00ffcc !important;
+}
+
+/* Hero Section Styling */
+.hero-section {
+  height: 70vh;
+  background: url("https://via.placeholder.com/1200x600/4b1e4b/6b1e6b?text=Space+Background")
+    no-repeat center center;
+  background-size: cover;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.welcome-text {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.hero-title span {
+  color: #ff00ff;
+}
+
+.browse-btn {
+  background-color: #ff80bf;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 25px;
+  border: none;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+.browse-btn:hover {
+  background-color: #00ffcc;
+}
