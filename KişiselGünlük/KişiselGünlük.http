@@ -1,0 +1,6 @@
+@KişiselGünlük_HostAddress = http://localhost:5190
+
+GET {{KişiselGünlük_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
