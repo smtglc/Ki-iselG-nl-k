@@ -38,6 +38,17 @@ namespace KişiselGünlük.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("PhotoContentType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("PhotoData")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
                     b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -149,7 +160,7 @@ namespace KişiselGünlük.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "0664e5ca-3279-4cac-8a20-9a74ae7a8a5a",
+                            Id = "5953fc50-34ae-470d-b5d5-ff7413b82440",
                             Name = "User",
                             NormalizedName = "USER"
                         });

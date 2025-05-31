@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Günlüklerim</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark p-4">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="anasayfa.html">
+          <img id="foto" src="/img/Untitled_logo_1_free-file.jpg" />
+          <span class="logo-text">Kişisel Günlüğüm</span>
+        </a>
+
+        <!-- Hamburger menü (mobil uyumlu) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Menüyü Aç"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menü Linkleri -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="günlüklerim.html">Günlüklerim</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="günlükEkle.html">Günlük Ekle</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="media.html">Media</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="anasayfa.html">Geri Dön</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Günlük Listesi -->
+    <div class="container mt-5">
+      <h2 class="mb-4">Günlüklerim</h2>
+      <div id="günlükListesi" class="row g-4">
+        <!-- Günlük kartları buraya eklenecek -->
+      </div>
+    </div>
+
+    <!-- İçerik Modal -->
+    <div
+      class="modal fade"
+      id="contentModal"
+      tabindex="-1"
+      aria-labelledby="modalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Kapat"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="modalPhotoContainer" class="mb-3 text-center"></div>
+            <div id="modalContentText"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kaldır Modal -->
+    <div
+      class="modal fade"
+      id="confirmRemoveModal"
+      tabindex="-1"
+      aria-labelledby="confirmRemoveLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="confirmRemoveLabel">Onayla</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Kapat"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Bu günlüğü kaldırmak istediğinize emin misiniz?
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Hayır
+            </button>
+            <button type="button" id="btnConfirmRemove" class="btn btn-danger">
+              Evet
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const token = localStorage.getItem("token");
+        const günlükListesi = document.getElementById("günlükListesi");
+        const modalTitle = document.getElementById("modalLabel");
+        const modalPhotoContainer = document.getElementById(
+          "modalPhotoContainer"
+        );
+        const modalContentText = document.getElementById("modalContentText");
+
+        let removeModal = new bootstrap.Modal(
+          document.getElementById("confirmRemoveModal")
+        );
+        let removeId = null; // Silinecek günlük id'si
+        let removeCardDiv = null; // Silinecek kart div
+
+        if (!token) {
+          alert("Oturum açmanız gerekiyor.");
+          window.location.href = "/login.html";
+          return;
+        }
+
+        try {
+          const response = await fetch(
+            "https://localhost:7298/api/texts/my-texts",
+            {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            }
+          );
+
+          if (!response.ok) throw new Error("Veriler alınamadı.");
+
+          const günlükler = await response.json();
+
+          if (günlükler.length === 0) {
+            günlükListesi.innerHTML = `<div class="col-12"><p class=" text-white">Henüz hiç günlük eklenmemiş.</p></div>`;
+            return;
+          }
+
+          günlükler.forEach((günlük) => {
+            const tarih = new Date(günlük.createdDate).toLocaleDateString(
+              "tr-TR"
+            );
+
+            // İçerikten 100 karakterlik önizleme al, uzun ise '...' ekle
+            const preview =
+              günlük.content.length > 100
+                ? günlük.content.substring(0, 100) + "..."
+                : günlük.content;
+
+            const kart = `
+              <div class="col-md-6" data-id="${günlük.id}">
+                <div class="card shadow-sm">
+                  <div class="card-body">
+                    <h5 class="card-title">${günlük.title || "Başlıksız"}</h5>
+                    <p class="card-text">${preview}</p>
+                    <a href="#" role="button" class="devaminiOku" data-id="${
+                      günlük.id
+                    }" data-title="${
+              günlük.title || "Başlıksız"
+            }">Devamını Oku</a>
+                    <button class="btn btn-sm btn-danger ms-2 btn-kaldir">Kaldır</button>
+                    <p class="card-text text-end"><small class="text-muted">${tarih}</small></p>
+                  </div>
+                </div>
+              </div>
+            `;
+            günlükListesi.innerHTML += kart;
+          });
+
+          // Event Listener
+          document.body.addEventListener("click", async (e) => {
+            if (e.target.classList.contains("devaminiOku")) {
+              e.preventDefault();
+
+              const id = e.target.getAttribute("data-id");
+              const title = e.target.getAttribute("data-title");
+
+              modalTitle.textContent = title;
+              modalPhotoContainer.innerHTML = "Yükleniyor...";
+              modalContentText.textContent = "";
+
+              // Fotoğrafı ve içeriği API'den çek
+              try {
+                // 1. İçeriği API'den al
+                const contentResponse = await fetch(
+                  `https://localhost:7298/api/texts/${id}`,
+                  {
+                    headers: {
+                      Authorization: `Bearer ${token}`,
+                    },
+                  }
+                );
+                if (!contentResponse.ok) throw new Error("İçerik alınamadı.");
+                const textData = await contentResponse.json();
+
+                // 2. Fotoğrafı API'den indir (blob olarak)
+                const photoResponse = await fetch(
+                  `https://localhost:7298/api/texts/${id}/download-photo`,
+                  {
+                    headers: {
+                      Authorization: `Bearer ${token}`,
+                    },
+                  }
+                );
+
+                modalContentText.textContent = textData.content || "";
+
+                if (photoResponse.ok) {
+                  const blob = await photoResponse.blob();
+                  const contentType = photoResponse.headers.get("Content-Type");
+                  if (blob.size > 0) {
+                    const imgUrl = URL.createObjectURL(blob);
+                    modalPhotoContainer.innerHTML = `<img src="${imgUrl}" alt="Günlük Fotoğrafı" class="img-fluid rounded mb-3" />`;
+                  } else {
+                    modalPhotoContainer.innerHTML = ""; // Fotoğraf yoksa boş bırak
+                  }
+                } else {
+                  modalPhotoContainer.innerHTML = ""; // Fotoğraf yoksa boş bırak
+                }
+              } catch (err) {
+                modalPhotoContainer.innerHTML = "";
+                modalContentText.textContent =
+                  "İçerik veya fotoğraf yüklenirken hata oluştu.";
+                console.error(err);
+              }
+
+              const modal = new bootstrap.Modal(
+                document.getElementById("contentModal")
+              );
+              modal.show();
+            }
+
+            if (e.target.classList.contains("btn-kaldir")) {
+              // Silme modalını aç
+              removeCardDiv = e.target.closest("[data-id]");
+              removeId = removeCardDiv.getAttribute("data-id");
+              removeModal.show();
+            }
+          });
+
+          // Modaldaki Evet butonuna tıklanınca silme işlemi
+          document
+            .getElementById("btnConfirmRemove")
+            .addEventListener("click", async () => {
+              if (!removeId) return;
+
+              const token = localStorage.getItem("token");
+              if (!token) {
+                alert("Oturum açmanız gerekiyor.");
+                window.location.href = "/login.html";
+                return;
+              }
+
+              try {
+                const response = await fetch(
+                  `https://localhost:7298/api/texts/${removeId}`,
+                  {
+                    method: "DELETE",
+                    headers: {
+                      Authorization: `Bearer ${token}`,
+                    },
+                  }
+                );
+
+                if (response.status === 204) {
+                  removeCardDiv.remove();
+                  alert("Günlük başarıyla kaldırıldı.");
+                } else {
+                  alert("Silme işlemi başarısız oldu. Lütfen tekrar deneyin.");
+                }
+              } catch (error) {
+                alert("Bir hata oluştu: " + error.message);
+              } finally {
+                removeModal.hide();
+                removeId = null;
+                removeCardDiv = null;
+              }
+            });
+        } catch (error) {
+          günlükListesi.innerHTML = `<div class="col-12"><p class="text-danger">Bir hata oluştu: ${error.message}</p></div>`;
+        }
+      });
+    </script>
+  </body>
+</html>

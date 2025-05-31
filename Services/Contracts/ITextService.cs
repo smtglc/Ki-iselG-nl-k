@@ -1,5 +1,6 @@
 ﻿using Entities.DataTransferObjects;
 using Entities.Model;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,5 +19,14 @@ namespace Services.Contracts
 
         Task<(TextDtoForUpdate textDtoForUpdate, Text text)> GetOneTextForPatchAsync(int id, bool trackChanges);
         Task SaveChangesForPatchAsync(TextDtoForUpdate textDtoForUpdate, Text text);
+
+        Task<IEnumerable<TextDto>> GetTextsByUserIdAsync(string userId, bool trackChanges);
+        Task UploadPhotoAsync(int textId, IFormFile photo);
+        Task<(byte[] PhotoData, string ContentType)> GetPhotoByTextIdAsync(int textId);
+        Task<IEnumerable<TextPhotoDto>> GetAllTextPhotosByUserIdAsync(string userId, bool trackChanges);
+
+
+
+
     }
 }

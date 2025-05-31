@@ -14,5 +14,7 @@ namespace Repositories.Contracts
         void CreateOneText(Text text);
         void DeleteOneText(Text text);
         void UpdateOneText(Text text);
+        Task<IEnumerable<Text>> GetTextsByUserIdAsync(string userId, bool trackChanges);
+
     }
 }

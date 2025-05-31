@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Günlük Ekle</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar (Temayla Uyumlu) -->
+    <nav class="navbar navbar-expand-lg navbar-dark p-4">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="anasayfa.html">
+          <img id="foto" src="/img/Untitled_logo_1_free-file.jpg" />
+          <span class="logo-text">Kişisel Günlüğüm</span>
+        </a>
+
+        <!-- Hamburger menü (mobil için) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Menüyü Aç"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar linkleri -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="günlüklerim.html">Günlüklerim</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="günlükEkle.html">Günlük Ekle</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="media.html">Media</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="anasayfa.html">Geri Dön</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Günlük Ekleme Formu -->
+    <div class="container mt-5">
+      <h2 class="mb-4">Yeni Günlük Ekle</h2>
+      <form id="günlükForm">
+        <div class="mb-3">
+          <label for="title" class="form-label">Başlık</label>
+          <input type="text" class="form-control" id="title" required />
+        </div>
+        <div class="mb-3">
+          <label for="content" class="form-label">İçerik</label>
+          <textarea
+            class="form-control"
+            id="content"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="kaydet_butonu">
+          Kaydet
+        </button>
+        <button
+          type="button"
+          class="btn btn-secondary ms-2"
+          id="foto_ekle_butonu"
+          disabled
+        >
+          Fotoğraf Ekle
+        </button>
+      </form>
+
+      <hr />
+
+      <h2 class="mb-4">Fotoğraf Seç</h2>
+      <input
+        type="file"
+        class="form-control"
+        id="photo"
+        accept="image/*"
+        disabled
+      />
+
+      <div id="message" class="mt-3"></div>
+    </div>
+
+    <script>
+      const günlükForm = document.getElementById("günlükForm");
+      const kaydetButonu = document.getElementById("kaydet_butonu");
+      const fotoEkleButonu = document.getElementById("foto_ekle_butonu");
+      const photoInput = document.getElementById("photo");
+      const messageDiv = document.getElementById("message");
+
+      let savedTextId = null; // Backend'den dönen günlük ID'sini saklamak için
+
+      // Günlük ekleme işlemi
+      günlükForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const token = localStorage.getItem("token");
+        if (!token) {
+          alert("Oturum açmalısınız!");
+          window.location.href = "/login.html";
+          return;
+        }
+
+        const title = document.getElementById("title").value;
+        const content = document.getElementById("content").value;
+
+        const response = await fetch("https://localhost:7298/api/texts", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({ title, content }),
+        });
+
+        if (response.status === 201) {
+          const yeniGünlük = await response.json();
+          savedTextId = yeniGünlük.id; // Backend'den dönen günlük ID'si
+          messageDiv.innerHTML = `<div class="alert alert-success">Günlük başarıyla eklendi! Fotoğraf ekleyebilirsiniz.</div>`;
+          // Fotoğraf seçme ve fotoğraf ekle butonunu aktif et
+          photoInput.disabled = false;
+          fotoEkleButonu.disabled = false;
+          günlükForm.reset();
+        } else if (response.status === 422) {
+          messageDiv.innerHTML = `<div class="alert alert-warning">Eksik ya da hatalı bilgi girdiniz.</div>`;
+        } else {
+          messageDiv.innerHTML = `<div class="alert alert-danger">Bir hata oluştu. Tekrar deneyin.</div>`;
+        }
+      });
+
+      // Fotoğraf ekleme işlemi
+      fotoEkleButonu.addEventListener("click", async () => {
+        const token = localStorage.getItem("token");
+        if (!token) {
+          alert("Oturum açmalısınız!");
+          window.location.href = "/login.html";
+          return;
+        }
+
+        if (!savedTextId) {
+          alert("Lütfen önce günlük ekleyin.");
+          return;
+        }
+
+        if (photoInput.files.length === 0) {
+          alert("Lütfen bir fotoğraf seçin.");
+          return;
+        }
+
+        const formData = new FormData();
+        formData.append("photo", photoInput.files[0]);
+
+        const response = await fetch(
+          `https://localhost:7298/api/texts/${savedTextId}/upload-photo`,
+          {
+            method: "POST",
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+            body: formData,
+          }
+        );
+
+        if (response.ok) {
+          messageDiv.innerHTML = `<div class="alert alert-success">Fotoğraf başarıyla yüklendi!</div>`;
+          photoInput.value = "";
+          // İstersen fotoğraf yüklendikten sonra butonları kapatabilirsin:
+          // fotoEkleButonu.disabled = true;
+          // photoInput.disabled = true;
+        } else {
+          const errorData = await response.json();
+          messageDiv.innerHTML = `<div class="alert alert-danger">Fotoğraf yüklenirken hata oluştu: ${
+            errorData.error || "Tekrar deneyin."
+          }</div>`;
+        }
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -30,5 +30,10 @@ namespace Repositories.EFCore
                   .SingleOrDefaultAsync();
 
         public void UpdateOneText(Text text) => Update(text);
+
+        public async Task<IEnumerable<Text>> GetTextsByUserIdAsync(string userId, bool trackChanges)
+        {
+            return await FindByCondition(t => t.UserId == userId, trackChanges).ToListAsync();
+        }
     }
 }

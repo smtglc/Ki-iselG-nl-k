@@ -9,11 +9,33 @@ body {
   background-color: #2a2a2a;
   padding: 15px 0;
 }
+h2.mb-4 {
+  color: #e7e2e5;
+}
 .modal-content {
-  background-color: #2a2a2a; /* Koyu zemin */
+  background-color: #494646; /* Koyu zemin */
   color: #fff; /* Beyaz yazı */
 }
-
+.card {
+  background-color: #7c7373; /* Gri tonu */
+  color: #fff; /* Yazı rengi beyaz kalsın */
+}
+#modalPhotoContainer img {
+  max-width: 600px; /* maksimum genişlik */
+  max-height: 600px; /* maksimum yükseklik */
+  width: 5500px;
+  height: 450px;
+  object-fit: contain;
+}
+#foto {
+  width: auto;
+  height: 40px;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+  padding-right: 10px;
+}
 .modal-content h4 {
   color: #fff; /* Başlıklar için garanti */
   margin-bottom: 20px;
@@ -26,7 +48,17 @@ body {
   background-clip: text; /* Standart özellik */
   -webkit-text-fill-color: transparent;
 }
-
+/* Kaydet butonu */
+#kaydet_butonu {
+  background-color: #845684;
+}
+#kaydet_butonu:hover {
+  background-color: #6f3f6f;
+}
+/* form_control bölümü  */
+.form-control {
+  background-color: rgb(172, 170, 168);
+}
 .search-form {
   width: 300px;
 }
@@ -89,4 +121,93 @@ body {
 
 .browse-btn:hover {
   background-color: #00ffcc;
+}
+
+/* Modal bölümü  */
+.modal-content {
+  background-color: #443f3f !important;
+  color: #ded1d9 !important;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #302530aa !important;
+}
+
+.modal-header {
+  border-bottom: 1px solid #ff00ff55;
+}
+
+.modal-title {
+  font-weight: 700;
+}
+
+.modal-body {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.btn-close {
+  filter: invert(100%);
+  opacity: 0.7;
+}
+
+.btn-close:hover {
+  opacity: 1;
+}
+
+/* devamını oku buton  */
+.devaminiOku {
+  background-color: #2a2a2a;
+  color: #cfb6cf;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.devaminiOku:hover {
+  background-color: #845684;
+  color: #2a2a2a;
+  text-decoration: none;
+}
+
+.modal-content {
+  background-color: #2a2a2a;
+  color: #ff00ff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #ff00ffaa;
+}
+
+.modal-header {
+  border-bottom: 1px solid #ff00ff55;
+}
+
+.modal-title {
+  font-weight: 700;
+}
+
+.modal-body {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.btn-close {
+  filter: invert(100%);
+  opacity: 0.7;
+}
+
+.btn-close:hover {
+  opacity: 1;
+}
+
+.btn-kaldir {
+  background-color: #845684;
+  color: white;
+  border: none;
+}
+
+.btn-kaldir:hover {
+  background-color: #6f3f6f; /* Hover rengi - biraz daha koyu tonu */
 }

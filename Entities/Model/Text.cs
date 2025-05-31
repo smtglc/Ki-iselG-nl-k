@@ -12,15 +12,25 @@ namespace Entities.Model
         public int Id { get; set; }
 
         [Required]
+        [MaxLength(100)] // Başlık için uzunluk sınırı (isteğe göre ayarlanabilir)
+        public string? Title { get; set; }
+
+        [Required]
         [MaxLength(40000)] // ≈ 6000 kelime
         public string? Content { get; set; }
 
-        public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
 
         // Yeni eklenen alanlar
         [Required]
         public string UserId { get; set; }
 
         public User User { get; set; }
+
+        // Fotoğraf verisi
+        public byte[]? PhotoData { get; set; }
+
+        // İstersen fotoğrafın içeriğinin tipi (MIME türü) için
+        public string? PhotoContentType { get; set; }
     }
 }

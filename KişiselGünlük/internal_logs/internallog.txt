@@ -338,3 +338,153 @@
 2025-05-28 18:43:01.2008 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
 2025-05-28 18:43:01.2085 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
 2025-05-28 18:43:01.2085 Info Configuration initialized.
+2025-05-28 18:57:52.7738 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-28 18:57:52.7869 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-28 18:57:52.7949 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-28 18:57:52.7949 Info Configuration initialized.
+2025-05-28 21:21:38.2841 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-28 21:21:38.2967 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-28 21:21:38.2967 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-28 21:21:38.3125 Info Configuration initialized.
+2025-05-28 21:25:16.4656 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-28 21:25:16.4789 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-28 21:25:16.4868 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-28 21:25:16.4868 Info Configuration initialized.
+2025-05-28 22:32:07.7427 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-28 22:32:07.7615 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-28 22:32:07.7724 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-28 22:32:07.7724 Info Configuration initialized.
+2025-05-28 22:32:49.0593 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-28 22:32:49.0791 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-28 22:32:49.0889 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-28 22:32:49.0889 Info Configuration initialized.
+2025-05-28 22:35:07.3601 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-28 22:35:07.3725 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-28 22:35:07.3807 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-28 22:35:07.3807 Info Configuration initialized.
+2025-05-28 22:41:14.3161 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-28 22:41:14.3332 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-28 22:41:14.3443 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-28 22:41:14.3538 Info Configuration initialized.
+2025-05-28 22:42:53.4791 Info AppDomain Shutting down. LogFactory closing...
+2025-05-28 22:42:53.4866 Info LogFactory has been closed.
+2025-05-28 22:46:07.2627 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-28 22:46:07.2747 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-28 22:46:07.2747 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-28 22:46:07.2747 Info Configuration initialized.
+2025-05-28 22:52:25.0846 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-28 22:52:25.0939 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-28 22:52:25.1000 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-28 22:52:25.1000 Info Configuration initialized.
+2025-05-28 22:52:25.6370 Info AppDomain Shutting down. LogFactory closing...
+2025-05-28 22:52:25.6370 Info LogFactory has been closed.
+2025-05-28 22:52:28.9513 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-28 22:52:28.9513 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-28 22:52:28.9677 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-28 22:52:28.9747 Info Configuration initialized.
+2025-05-28 22:52:30.4865 Info AppDomain Shutting down. LogFactory closing...
+2025-05-28 22:52:30.4865 Info LogFactory has been closed.
+2025-05-28 22:52:55.8651 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-28 22:52:55.8651 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-28 22:52:55.8651 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-28 22:52:55.8898 Info Configuration initialized.
+2025-05-28 22:52:56.8393 Info AppDomain Shutting down. LogFactory closing...
+2025-05-28 22:52:56.8393 Info LogFactory has been closed.
+2025-05-28 22:53:11.3375 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-28 22:53:11.3375 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-28 22:53:11.3529 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-28 22:53:11.3529 Info Configuration initialized.
+2025-05-28 22:53:12.4971 Info AppDomain Shutting down. LogFactory closing...
+2025-05-28 22:53:12.4971 Info LogFactory has been closed.
+2025-05-28 22:53:23.0933 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-28 22:53:23.1057 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-28 22:53:23.1171 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-28 22:53:23.1171 Info Configuration initialized.
+2025-05-28 23:00:19.7833 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-28 23:00:19.7955 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-28 23:00:19.8027 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-28 23:00:19.8027 Info Configuration initialized.
+2025-05-29 00:47:07.3878 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-29 00:47:07.4007 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-29 00:47:07.4007 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-29 00:47:07.4169 Info Configuration initialized.
+2025-05-29 01:19:03.3387 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-29 01:19:03.3387 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-29 01:19:03.3387 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-29 01:19:03.3605 Info Configuration initialized.
+2025-05-29 01:19:03.8999 Info AppDomain Shutting down. LogFactory closing...
+2025-05-29 01:19:03.8999 Info LogFactory has been closed.
+2025-05-29 01:19:05.3543 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-29 01:19:05.3543 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-29 01:19:05.3701 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-29 01:19:05.3701 Info Configuration initialized.
+2025-05-29 01:19:06.9285 Info AppDomain Shutting down. LogFactory closing...
+2025-05-29 01:19:06.9285 Info LogFactory has been closed.
+2025-05-29 01:19:25.5834 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-29 01:19:25.5932 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-29 01:19:25.5932 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-29 01:19:25.6065 Info Configuration initialized.
+2025-05-29 01:19:26.4854 Info AppDomain Shutting down. LogFactory closing...
+2025-05-29 01:19:26.4907 Info LogFactory has been closed.
+2025-05-29 01:19:36.7893 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-29 01:19:36.7982 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-29 01:19:36.8043 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-29 01:19:36.8043 Info Configuration initialized.
+2025-05-29 01:19:37.8026 Info AppDomain Shutting down. LogFactory closing...
+2025-05-29 01:19:37.8081 Info LogFactory has been closed.
+2025-05-29 01:22:09.4670 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-29 01:22:09.4807 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-29 01:22:09.4807 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-29 01:22:09.4981 Info Configuration initialized.
+2025-05-29 01:37:00.1408 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-29 01:37:00.1537 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-29 01:37:00.1615 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-29 01:37:00.1615 Info Configuration initialized.
+2025-05-29 01:54:29.3634 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-29 01:54:29.3815 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-29 01:54:29.3928 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-29 01:54:29.4081 Info Configuration initialized.
+2025-05-29 01:57:38.7092 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-29 01:57:38.7213 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-29 01:57:38.7285 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-29 01:57:38.7285 Info Configuration initialized.
+2025-05-29 02:13:50.8837 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-29 02:13:50.8997 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-29 02:13:50.9112 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-29 02:13:50.9279 Info Configuration initialized.
+2025-05-29 02:33:25.3120 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-29 02:33:25.3212 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-29 02:33:25.3212 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-29 02:33:25.3342 Info Configuration initialized.
+2025-05-29 02:33:25.8702 Info AppDomain Shutting down. LogFactory closing...
+2025-05-29 02:33:25.8702 Info LogFactory has been closed.
+2025-05-29 02:33:27.3859 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-29 02:33:27.3859 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-29 02:33:27.4011 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-29 02:33:27.4011 Info Configuration initialized.
+2025-05-29 02:33:31.1316 Info AppDomain Shutting down. LogFactory closing...
+2025-05-29 02:33:31.1368 Info LogFactory has been closed.
+2025-05-29 02:33:44.0405 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-29 02:33:44.0493 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-29 02:33:44.0554 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-29 02:33:44.0554 Info Configuration initialized.
+2025-05-29 02:33:44.9185 Info AppDomain Shutting down. LogFactory closing...
+2025-05-29 02:33:44.9185 Info LogFactory has been closed.
+2025-05-29 02:33:51.1640 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-29 02:33:51.1640 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-29 02:33:51.1790 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-29 02:33:51.1790 Info Configuration initialized.
+2025-05-29 02:33:52.8084 Info AppDomain Shutting down. LogFactory closing...
+2025-05-29 02:33:52.8084 Info LogFactory has been closed.
+2025-05-29 02:38:17.1616 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-29 02:38:17.1786 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-29 02:38:17.1786 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-29 02:38:17.2001 Info Configuration initialized.
+2025-05-29 03:10:57.7566 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-29 03:10:57.7704 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-29 03:10:57.7704 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-29 03:10:57.7891 Info Configuration initialized.
+2025-05-29 22:18:44.6643 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-05-29 22:18:44.6860 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-05-29 22:18:44.6998 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\lenovo\source\repos\KişiselGünlük\KişiselGünlük\nlog.config
+2025-05-29 22:18:44.7229 Info Configuration initialized.

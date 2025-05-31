@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace KişiselGünlük.Migrations
 {
     /// <inheritdoc />
-    public partial class AddUserTextRelation : Migration
+    public partial class GetAllPhoto : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -164,9 +164,12 @@ namespace KişiselGünlük.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Content = table.Column<string>(type: "nvarchar(max)", maxLength: 40000, nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    PhotoData = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
+                    PhotoContentType = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -182,7 +185,7 @@ namespace KişiselGünlük.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "0664e5ca-3279-4cac-8a20-9a74ae7a8a5a", null, "User", "USER" });
+                values: new object[] { "5953fc50-34ae-470d-b5d5-ff7413b82440", null, "User", "USER" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
